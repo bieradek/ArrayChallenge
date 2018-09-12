@@ -8,6 +8,8 @@ package com.timbuchalka;
 //and sort integers should sort the array and return a new array containing the sorted numbers
 //you will have to figure out how to copy the array elements from the passed array into a new array and sort them and returnd the new sorted array
 
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -46,10 +48,11 @@ public class Main {
     }
 
     public static int[] sortIntegers(int[] array) {
-        int[] sortedArray = new int[array.length]; //creating an array which is exactly the same size as the array above
-        for (int i = 0; i < array.length; i++) {
-            sortedArray[i] = array[i]; // copying the values from the initial array into the copy(sortedArray)
-        }
+//        int[] sortedArray = new int[array.length]; //creating an array which is exactly the same size as the array above
+//        for (int i = 0; i < array.length; i++) {
+//            sortedArray[i] = array[i]; // copying the values from the initial array into the copy(sortedArray)
+//        }
+        int sortedArray = Arrays.copyOf(array, array.length);
         boolean flag = true; // making sure it will execute at least once
         int temp;
         while (flag) {
