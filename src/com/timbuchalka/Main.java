@@ -14,8 +14,9 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-
         int[] myIntegers = getIntegers(5);
+        int[] sorted = sortIntegers(myIntegers);
+        printArray(sorted);
     }
 
     public static int[] getIntegers(int capacity) {
@@ -28,7 +29,7 @@ public class Main {
     }
 
     public static void printArray(int[] array) {
-        for (int i = 1; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println("Element " + i + " contents " + array[i]);
         }
     }
